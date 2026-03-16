@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-color: #0A0A0A;
+  /* Rich Black - Main bg */
+  --color-secondary-color: #FFFFFF;
+  /* Crisp White - Typography, Cards */
+  --color-accent-color: #0093D3;
+  /* Electric Cyan - Primary CTA */
+  --color-accent-2: #E6007E;
+  /* Hot Magenta - Secondary buttons */
+  --color-accent-3: #FFC000;
+  /* Mustard Yellow - Highlights */
+
+  --color-background-color: #0A0A0A;
+  --color-text-color: #FFFFFF;
+  --color-card-bg: #171717;
+  /* Slightly lighter black for cards */
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --radius-4xl: 32px;
+  --radius-5xl: 48px;
+  --radius-6xl: 80px;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-background-color text-text-color antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-bold text-white;
+  }
+
+  p {
+    @apply text-gray-300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-2);
+}
